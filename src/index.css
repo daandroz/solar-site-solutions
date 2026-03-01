@@ -1,0 +1,33 @@
+:root {
+  --teal: #00BCD4;
+  --teal-dark: #00838F;
+  --teal-light: #E0F7FA;
+  --dark: #1C2B2D;
+  --mid: #4A5E60;
+  --light: #F7F4F0;
+  --accent: #00E5FF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
